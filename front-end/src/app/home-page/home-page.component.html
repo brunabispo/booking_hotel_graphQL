@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <h1><b>Hotels List</b></h1>
+
+    <label style="font-size: 20px;">Search Hotel: </label> &nbsp;
+    <input type="text" id="myInput" onchange="myFunction()" placeholder="Enter hotel name..." title="Type in a name">
+    <table id="hotels">
+      <tr class="header">
+        <th>Hotel Name</th>
+        <th>City</th>
+        <th>Price</th>
+      </tr>
+      <tr *ngFor = "let hotel of hotels">
+        <td>{{hotel.hotel_name}}</td>
+        <td>{{hotel.city}}</td>
+        <td>${{hotel.price}}</td>
+      </tr>
+    </table>
+    <button type="submit" class="button" routerLink="/bookHotel"><span>Add New Booking</span></button>
+    <button style="margin-left: 20px; background-color: rgb(47, 56, 184);" type="submit" class="button" routerLink="/addHotel"><span>Add New Hotel</span></button>
+
+
+    <script>
+      function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("hotels");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+      </script>
+  </body>
+</html>

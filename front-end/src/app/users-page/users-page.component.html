@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Users</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <h1><b>Users List</b></h1>
+    <table id="hotels">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      <tr *ngFor = "let user of users">
+        <td>{{user.user_id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+    </table>
+
+    <button type="submit" class="button" routerLink="/addUser"><span>Add New User</span></button>
+  </body>
+</html>

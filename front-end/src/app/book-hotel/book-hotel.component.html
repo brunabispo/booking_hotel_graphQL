@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Book Hotel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+  <div class="login-form">
+      <form #loginForm = "ngForm" (ngSubmit) = "onSubmit(loginForm)">
+          <h2 class="text-center">Book Hotel</h2>
+          <div class="form-group">
+            <label for="username">Hotel Name</label><br>
+            <input type="text" class="form-control" id="hotel_name" name="hotel_name" placeholder="Enter hotel name" ngModel required>
+          </div>
+          <!-- <div class="form-group">
+            <label for="username">Hotel Name</label><br>
+            <select class="form-group">
+              <option class="form-group" id="hotel_name" name="hotel_name" *ngFor = "let hotel of hotels" ngModel required [ngValue]="hotel.hotel_name">{{hotel.hotel_name}}</option>
+            </select>
+        </div> -->
+          <div class="form-group">
+            <label for="username">Client</label><br>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter client's username" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="username">Today's Date</label><br>
+            <input type="date" class="form-control" id="booking_date" name="booking_date" ngModel required> <!-- CHECK DATE TYPE -->
+          </div>
+          <div class="form-group">
+            <label for="username">Start Date</label><br>
+            <input type="date" class="form-control" id="start_date" name="start_date" ngModel required> <!-- CHECK DATE TYPE -->
+          </div>
+          <div class="form-group">
+            <label for="username">End Date</label><br>
+            <input type="date" class="form-control" id="end_date" name="end_date" ngModel required> <!-- CHECK DATE TYPE -->
+          </div>
+          <!-- <div class="form-group">
+            <label for="user_id">ID</label><br>
+            <input type="number" class="form-control" id="booking_id" name="booking_id" placeholder="Enter an ID (number)" ngModel required>
+          </div> -->
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">Book Hotel</button>
+          </div>
+      </form>
+      <p class="text-center"><a routerLink="/bookings">Cancel</a></p>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Add Hotel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+  <div class="login-form">
+      <form #loginForm = "ngForm" (ngSubmit) = "onSubmit(loginForm)">
+          <h2 class="text-center">Add Hotel</h2>
+          <div class="form-group">
+            <label for="hotel_name">Hotel Name</label><br>
+            <input type="text" class="form-control" id="hotel_name" name="hotel_name" placeholder="Enter hotel name" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="street">Street</label><br>
+            <input type="text" class="form-control" id="street" name="street" placeholder="Enter the street of the hotel" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="city">City</label><br>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Enter the city of the hotel" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="postal_code">Postal Code</label><br>
+            <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="Enter the postal code of the hotel" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label><br>
+            <input type="number" class="form-control" id="price" name="price" placeholder="Enter the price of the hotel" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label><br>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter the email of the hotel" ngModel required>
+          </div>
+          <!-- <div class="form-group">
+            <label for="hotel_id">ID</label><br>
+            <input type="number" class="form-control" id="hotel_id" name="hotel_id" placeholder="Enter the hotel ID (number)" ngModel required>
+          </div> -->
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">Add Hotel</button>
+          </div>
+      </form>
+      <p class="text-center"><a routerLink="/home">Cancel</a></p>
+  </div>
+  </body>
+</html>
+

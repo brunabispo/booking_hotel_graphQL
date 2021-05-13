@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Booking">
+    <meta name="author" content="Bruna Bispo">
+    <title>Hotel Booking</title>
+  </head>
+  <body>
+
+
+    <div class="Header">
+      <h1 id="Title-header" style="text-align: center">Hotel Bookings</h1>
+      <p style="text-align: center; color: white;">by Bruna Bispo Abatepaulo</p>
+    </div>
+
+    <div class="topnav">
+      <a routerLink="/home">Hotels</a>
+
+      <ng-template #isLogout [ngOutletContext]="context">
+        <a routerLink="/login">Login</a>
+      </ng-template>
+
+      <a routerLink="/bookings">Bookings</a>
+
+      <a routerLink="/users">Users</a>
+
+      <div *ngIf="isValid; else isLogout">
+        <a routerLink="/logout">Logout</a>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+  </body>
+</html>
+
