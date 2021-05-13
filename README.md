@@ -1,2 +1,3 @@
-# booking_hotel_graphQL
-Booking Hotel App
+# Booking Hotel App
+
+## Using Angular JS, Graph QL and MongoDB
